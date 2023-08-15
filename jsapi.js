@@ -61,7 +61,7 @@ async function City_GEO_Search(city_name){
     //let city_name = "Mombasa";
     const CITY_RETURN_LIMIT = 5;
 
-    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=${CITY_RETURN_LIMIT}&appid=${API_key}&units=metric`;
+    let url = `https://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=${CITY_RETURN_LIMIT}&appid=${API_key}&units=metric/`;
 
     const LAT_LONG_FETCH = await fetch(url);
     const LAT_LONG_RESPONSE = await LAT_LONG_FETCH.json();
@@ -76,7 +76,7 @@ async function City_GEO_Search(city_name){
     console.log(lat);
     console.log(lon);
 
-    const City_Search = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`;
+    const City_Search = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}/`;
 
     const City_Weather_Fetch = await fetch(City_Search);
     const City_Response =  await City_Weather_Fetch.json();
