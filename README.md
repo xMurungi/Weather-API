@@ -6,7 +6,7 @@
 This is a website that allows you to search a city name and return the current weather of the City.
 It is a simple one for now but more updates will be made 
 
-##Mombasa, Kenya weather condition
+## Mombasa, Kenya weather condition
 <img width="960" alt="working weather-appScreenshot 2023-08-17 101511" src="https://github.com/xMurungi/Weather-API/assets/115868141/f5868a91-bc0d-4a1e-aa4c-e62773f45dc9">
 
 ## Below is the weather information of Brussels, capital city of Belgium
