@@ -14,12 +14,12 @@ const searchbtn = document.querySelector(".search-info button").addEventListener
     console.log(Location_Weather_Info); 
     // Feeding input to display 
 
-    document.getElementById("id-city").textContent        =   `${Input_Value.value}`;
-    document.getElementById("actual-temp").textContent    =   `Actual temp ${Math.ceil(Location_Weather_Info.main.temp-273.15)} °C`;
-    document.getElementById("humidity").textContent       =   `Humidity ${Location_Weather_Info.main.humidity} %`;
-    document.getElementById("pressure").textContent       =   `Pressure ${Location_Weather_Info.main.pressure} hPa`;
-    document.getElementById("feels").textContent          =   `It feels like ${Math.ceil(Location_Weather_Info.main.feels_like-273.15)} °C`;
-    document.getElementById("windspeed").textContent      =   `Wind speed ${Location_Weather_Info.wind.speed} m/s`;
+    document.getElementById("id-city-text").textContent        =   `${Input_Value.value.toUpperCase()}`;
+    document.getElementById("actual-temp-text").textContent    =   `Actual temp ${Math.ceil(Location_Weather_Info.main.temp-273.15)} °C`;
+    document.getElementById("humidity-text").textContent       =   `Humidity ${Location_Weather_Info.main.humidity} %`;
+    document.getElementById("pressure-text").textContent       =   `Pressure ${Location_Weather_Info.main.pressure} hPa`;
+    document.getElementById("feels-text").textContent          =   `Feels like ${Math.ceil(Location_Weather_Info.main.feels_like-273.15)} °C`;
+    document.getElementById("windspeed-text").textContent      =   `Wind speed ${Location_Weather_Info.wind.speed} m/s`;
 
 });
 
@@ -76,7 +76,7 @@ async function City_GEO_Search(city_name){
     console.log(lat);
     console.log(lon);
 
-    const City_Search = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}/`;
+    const City_Search = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`;
 
     const City_Weather_Fetch = await fetch(City_Search);
     const City_Response =  await City_Weather_Fetch.json();
