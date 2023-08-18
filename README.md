@@ -11,3 +11,5 @@ It is a simple one for now but more updates will be made
 
 ## Below is the weather information of Brussels, capital city of Belgium
 <img width="960" alt="brussels-weatherApp-Screenshot 2023-08-17 101650" src="https://github.com/xMurungi/Weather-API/assets/115868141/30f40c70-b4be-4e3d-93ad-0450d84b0d3d">
+
+Currently to be able to use the website you have to allow your browser to allow insecure content for this website for it to load weather data. 
